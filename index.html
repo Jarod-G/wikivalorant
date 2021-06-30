@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/jpg" href="ressources/logo.jpg" />
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WikiValorant</title>
 </head>
 
 <body>
+    <div class="top_header">
+        <h1>WikiValorant</h1>
+        <div id="navbar">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="agents.html">Agents</a></li>
+            <li><a href="learn_skills.html">Learn skills</a></li>
+            <li><a href="maps.html">maps</a></li>
+        </ul>
+        </div>
+    </div>
+    <div id="animatedBackground"></div>
+    <div class="info_site">
+        <p>Bienvenue sur la FanPage Valorant nommée WikiValorant !</p>
+        <p>ici vous retrouverez les <a href="news.html">news</a> du jeu,</p>
+        <p>les informations concernants les differents <a href="agents.html">agents</a> du jeu,</p>
+        <p>des astuces pour devenir <a href="learn_skills.html">radiant</a> </p>
+        <p>et toutes les informations concernants les <a href="maps.html">maps</a> du jeu !</p>
+    </div>
+    <div class="video_background_header">
+        <video preload="true" muted loop autoplay width="">
+            <source src="ressources/valorant_trailer.mp4" type="video/mp4">
+        </video>
+    </div>
 
-    <h1>Voici le début du site sur github</h1>
-
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,152 @@
+/* CSS ALL PAGES + INDEX*/
+
+@font-face {
+    font-family: 'Valorant';
+    src: url("ressources/Valorant_Font.ttf");
+   }
+   
+
+body {
+    font-family: 'Valorant';
+    height: 100%;
+    background-image: url("ressources/bg_site.jpg");
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.info_site {
+    text-align: center;
+    display: block;
+    color: white;
+    font-size: 30px;
+}
+
+.top_header{
+    background-color: rgb(43, 40, 40);
+    background: rgb(43, 40, 40);
+    padding: 0;
+    margin: 0;
+}
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+
+@keyframes titleSlide {
+    0%   {letter-spacing: 5px;}
+    30%  {letter-spacing: 45px;}
+    85% {letter-spacing: 25px;}
+    100% {letter-spacing: 6px;}
+}
+
+h1{
+    text-align: center;
+    letter-spacing: 6px;
+    color: white;
+    padding: 14px 16px;
+    margin: 0;
+    animation: titleSlide 8s;
+}
+
+
+.top_header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(43, 40, 40);
+}
+  
+.top_header li {
+    float: left;
+    width: 20%;
+}
+ 
+
+.top_header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    animation: transform .5s;
+    animation: color 3s;
+}
+  
+
+.top_header li a:hover {
+    background-color:rgb(32, 30, 30);
+    color: red;
+    transform: scale(1.2);
+}
+
+video {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    max-height: 100%;
+    top: 0;
+    bottom: 0;
+  }
+
+/* CSS AGENTS PAGE*/
+
+#agents{
+    color: white;
+    max-width: 100%;
+    font-size: 16px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: inline-flex;
+}
+
+@keyframes agentZoom {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.05);}
+    100%{transform: scale(1);}
+}
+
+#agents li {
+    text-align: center;
+    font-size: 35px;
+}
+
+#agents p {
+    text-align: center;
+}
+
+#agents img {
+    height: 600px; 
+}
+
+#agents img:hover {
+    height: 650px;
+    animation: agentZoom 3s infinite;
+}
+
+
+/* CODE CSS NEWS PAGE*/
+
+.info_news {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.twitter-timeline {
+    margin: 60px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiValorant</title>
+</head>
+
+<body>
+    <div class="top_header">
+        <h1>WikiValorant</h1>
+        <div id="navbar">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="agents.html">Agents</a></li>
+            <li><a href="learn_skills.html">Learn skills</a></li>
+            <li><a href="maps.html">maps</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="info_news">
+        <p>Voici les differents flux twitter mis a jour en continue !</p>
+        <p>Ces differents comptes vous tiendrons a jours sur le jeu.</p>
+    </div>
+
+
+    <div class="twitter_valorant">
+        <a class="twitter-timeline" width="500" height="300" data-theme="dark" data-height="400" href="https://twitter.com/PlayVALORANT">Tweets du compte officiel</a> 
+        <a class="twitter-timeline" width="500" height="300" data-theme="dark" data-height="400" href="https://twitter.com/VALORANTfr">Tweets du compte officiel français</a> 
+        <a class="twitter-timeline" width="500" height="300" data-theme="dark" data-height="400" href="https://twitter.com/ValorLeaks">Tweets concernant d'éventuels leaks</a>  
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+</body>
+</html>
