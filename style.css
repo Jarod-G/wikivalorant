@@ -1,20 +1,57 @@
 /* CSS ALL PAGES + INDEX*/
 
 @font-face {
-    font-family: 'Valorant';
-    src: url("ressources/Valorant_Font.ttf");
+    font-family: 'valorantFont';
+    src: url("ressources/fonts/Valorant_Font.ttf");
    }
    
+@font-face {
+    font-family: 'mainFont';
+    src: url("ressources/fonts/Stomper_Regular.otf");
+}
+
+@keyframes titleSlide {
+    0%   {letter-spacing: 6px;}
+    30%  {letter-spacing: 30px;}
+    85% {letter-spacing: 20px;}
+    100% {letter-spacing: 6px;}
+}
+
+@keyframes navbarSlide {
+    0%   {letter-spacing: 5px;}
+    100% {letter-spacing: 10px;}
+}
+
+h1{
+    text-align: center;
+    font-family: 'valorantFont';
+    letter-spacing: 6px;
+    color: white;
+    padding: 10px 12px;
+    margin: 0;
+    animation: titleSlide 3s;
+}
 
 body {
-    font-family: 'Valorant';
+    font-family: 'mainFont';
     height: 100%;
-    background-image: url("ressources/bg_site.jpg");
+    background-image: url("ressources/images/bg_site.jpg");
     scroll-behavior: smooth;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
 }
+
+video {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    max-height: 100%;
+    top: 0;
+    bottom: 0;
+}
+
 
 .info_site {
     text-align: center;
@@ -29,35 +66,27 @@ body {
     padding: 0;
     margin: 0;
 }
+
 #navbar {
     overflow: hidden;
     background-color: #333;
+    font-size: 25px;
+    letter-spacing: 5px;
   }
 
+#navbar li a:hover {
+    background-color:rgb(32, 30, 30);
+    color: red;
+    animation: navbarSlide 1s;
+    animation-fill-mode: forwards;
+}
+
 .sticky {
-    position: fixed;
+    position: fixed; z-index: 1;
     top: 0;
     width: 100%;
   }
   
-
-@keyframes titleSlide {
-    0%   {letter-spacing: 5px;}
-    30%  {letter-spacing: 45px;}
-    85% {letter-spacing: 25px;}
-    100% {letter-spacing: 6px;}
-}
-
-h1{
-    text-align: center;
-    letter-spacing: 6px;
-    color: white;
-    padding: 14px 16px;
-    margin: 0;
-    animation: titleSlide 8s;
-}
-
-
 .top_header ul {
     list-style-type: none;
     margin: 0;
@@ -76,48 +105,33 @@ h1{
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
     animation: transform .5s;
     animation: color 3s;
 }
-  
 
-.top_header li a:hover {
-    background-color:rgb(32, 30, 30);
-    color: red;
-    transform: scale(1.2);
-}
-
-video {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    max-height: 100%;
-    top: 0;
-    bottom: 0;
-  }
 
 /* CSS AGENTS PAGE*/
+
+
+@keyframes agentZoom {
+    0%{transform: scale(1);}
+    100%{transform: scale(1.1);}
+}
+
 
 #agents{
     color: white;
     max-width: 100%;
     font-size: 16px;
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    padding-bottom: 50px;
+    margin: 0;
+    padding-bottom: 0px;
     overflow-x: scroll;
     overflow-y: hidden;
     display: inline-flex;
-}
-
-@keyframes agentZoom {
-    0%{transform: scale(1);}
-    50%{transform: scale(1.05);}
-    100%{transform: scale(1);}
 }
 
 #agents li {
@@ -125,28 +139,49 @@ video {
     font-size: 35px;
 }
 
+.agent-div:hover img{
+    animation: agentZoom 1s forwards;
+}
+
+.agent-div:active img{
+    animation: agentZoom 1s forwards;
+}
+
 #agents p {
     text-align: center;
+    font-size: 25px;
+    
+}
+
+#agents p:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #agents img {
-    height: 600px; 
-}
-
-#agents img:hover {
-    height: 650px;
-    animation: agentZoom 3s infinite;
+    height: 450px;
+    position:relative;
 }
 
 
 /* CODE CSS NEWS PAGE*/
 
+
 .info_news {
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .twitter-timeline {
     margin: 60px;
+}
+
+
+/* CODE CSS learn_skills PAGE*/
+
+
+.video_pro {
+    margin-left: 30%;
+    margin-top: 10%;
+    position: fixed;
 }
